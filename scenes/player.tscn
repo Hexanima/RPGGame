@@ -63,12 +63,12 @@ animations = [{
 "texture": SubResource("AtlasTexture_ld5lp")
 }],
 "loop": true,
-"name": &"default",
+"name": &"run",
 "speed": 10.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cg3l7"]
-size = Vector2(12, 17)
+size = Vector2(10, 8)
 
 [node name="Player" type="CharacterBody2D"]
 slide_on_ceiling = false
@@ -76,8 +76,10 @@ script = ExtResource("1_2gfhi")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_i3vm5")
-frame_progress = 0.917857
+animation = &"run"
+autoplay = "run"
+frame_progress = 0.396075
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 3.5)
+position = Vector2(0, 8)
 shape = SubResource("RectangleShape2D_cg3l7")
